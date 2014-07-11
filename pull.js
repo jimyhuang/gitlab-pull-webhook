@@ -1,8 +1,7 @@
 var spawn=require("child_process").spawn;
 var sprintf=require("sprintf-js").sprintf;
 var path=require("path");
-var configDir=require("./configDir");
-var config=require(path.join(configDir, "config"));
+var config=require("./config.js");
 
 module.exports = function (repo) {
     var repoCfg=config.repositories[repo],

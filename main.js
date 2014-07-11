@@ -1,4 +1,4 @@
-var config=require("./config");
+var config=require("./config.js");
 var gitlabhook = require('gitlabhook');
 var pull = require("./pull");
 
@@ -9,4 +9,5 @@ var gitlab = gitlabhook({
     pull(data.repository.name);
 });
 
+console.log('Server listen on '+config.port);
 gitlab.listen();

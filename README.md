@@ -14,8 +14,6 @@ Currently, it runs on GNU/Linux and BSD OSes only, and it can only run in a star
 * `sudo git clone gitlab-pull-webhook-url`
 * `cd gitlab-pull-webhook`
 * `sudo npm install`
-* `sudo npm install -g gulp`
-* `sudo gulp install-ubuntu`
+* 'npm start'
   * Copies config.js into the directory specified by configDir.js
   * Copies 'gitlab-pull-webhook' startup script to /etc/init
-* `sudo start gitlab-pull-webhook` starts the startup script manually

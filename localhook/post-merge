@@ -1,0 +1,17 @@
+#!/bin/bash -x
+
+WEBROOT="/yourroot/no-trailing-slash"
+
+IRCCHANNEL="your-irc-channel"
+IRCNICK="your-nick"
+IRCACTION="your-action"
+IRCMSG="your irc message"
+
+rsync -e "ssh -p22" -avz --no-links --delete $WEBROOT/ your_hostname:$WEBROOT
+(
+echo "USER bot guest tolmoon tolsun"
+echo "NICK $IRCNICK"
+echo "JOIN #$IRCCHANNEL"
+echo "PRIVMSG #neticrm :[10$IRCACTION] $IRCMSG"
+echo "QUIT"
+) | nc irc.freenode.net 6667

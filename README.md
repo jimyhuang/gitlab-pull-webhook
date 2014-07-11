@@ -17,3 +17,7 @@ Currently, it runs on GNU/Linux and BSD OSes only, and it can only run in a star
 * 'npm start'
   * Copies config.js into the directory specified by configDir.js
   * Copies 'gitlab-pull-webhook' startup script to /etc/init
+
+# Local Hook
+
+* check localhook directory to find useful hook to after pull
